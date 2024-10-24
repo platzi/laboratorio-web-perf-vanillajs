@@ -1,30 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.0.9/css/all.css"
-      integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Open+Sans"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.6.0/tiny-slider.css"
-    />
+    <meta charset="UTF-8">
+    <meta name="description" content="Prueba técnica de Optimización Web">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oasis</title>
     <link rel="stylesheet" href="./css/main.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.6.0/min/tiny-slider.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment-with-locales.min.js"
-      integrity="sha512-vFABRuf5oGUaztndx4KoAEUVQnOvAIFs59y4tO0DILGWhQiFnFHiR+ZJfxLDyJlXgeut9Z07Svuvm+1Jv89w5g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
   </head>
   <body>
     <nav class="nav--desktop">
@@ -78,51 +59,63 @@
             Prevent incidents and be efficient.
           </p>
           <a href="" class="cta">
-            <strong>Download From</strong><br />
-            <small>App Store</small>
+            <span>
+              <strong>Download From</strong><br />
+              <small>App Store</small>
+            </span>
+            <i class="fab fa-apple cta--icon"></i>
           </a>
         </div>
         <div class="flex_child--horizontal fadeInUp">
-          <img src="./images/hero-phone.png" />
+          <img src="./images/hero-phone.jpg" alt="avg. response time"/>
         </div>
       </div>
     </section>
 
-    <section class="section--summary">
-      <div class="flex--vertical">
-        <div class="flex_child--vertical flex--horizontal summary__lists">
-          <div class="summary__list flex--horizontal fadeIn">
-            <img src="./images/summary-github.png" />
-            <p>works on phone and all devices</p>
+    <div class="section--container">
+      <section class="section--summary">
+        <div class="flex--vertical">
+          <div class="flex_child--vertical flex--horizontal summary__lists">
+            <div class="summary__list flex--horizontal fadeIn">
+              <figure class="summary__list--icon">
+                <i class="fab fa-github"></i>
+              </figure>
+              <p>works on phone and all devices</p>
+            </div>
+            <div class="summary__list flex--horizontal fadeIn">
+              <figure class="summary__list--icon">
+                <i class="fas fa-microchip"></i>
+              </figure>
+              <p>free status page for monitoring</p>
+            </div>
+            <div class="summary__list flex--horizontal fadeIn">
+              <figure class="summary__list--icon">
+                <i class="fas fa-dollar-sign"></i>
+              </figure>
+              <p>easy integrations and setup</p>
+            </div>
           </div>
-          <div class="summary__list flex--horizontal fadeIn">
-            <img src="./images/summary-cpu.png" />
-            <p>free status page for monitoring</p>
-          </div>
-          <div class="summary__list flex--horizontal fadeIn">
-            <img src="./images/summary-dollar.png" />
-            <p>easy integrations and setup</p>
+          <div class="flex_child--vertical flex--horizontal aligner fadeIn">
+            <p>
+              For some systems, latency and throughput are coupled entities. In
+              TCP/IP, latency can also directly affect throughput. In TCP
+              connections, the large bandwidth-delay product of high latency
+              connections, combined with relatively small TCP window sizes on many
+              devices, effectively causes the throughput of a high latency
+              connection to drop sharply with latency. <br /><br />
+              This can be remedied with various techniques, such as increasing the
+              TCP congestion window size, or more drastic solutions, such as
+              packet coalescing, TCP acceleration, and forward error correction,
+              all of which are commonly used for high latency satellite links.
+            </p>
+            <h2 class="font-fjalla aligner_item--bottom">
+              Reliable Monitoring System
+            </h2>
           </div>
         </div>
-        <div class="flex_child--vertical flex--horizontal aligner fadeIn">
-          <p>
-            For some systems, latency and throughput are coupled entities. In
-            TCP/IP, latency can also directly affect throughput. In TCP
-            connections, the large bandwidth-delay product of high latency
-            connections, combined with relatively small TCP window sizes on many
-            devices, effectively causes the throughput of a high latency
-            connection to drop sharply with latency. <br /><br />
-            This can be remedied with various techniques, such as increasing the
-            TCP congestion window size, or more drastic solutions, such as
-            packet coalescing, TCP acceleration, and forward error correction,
-            all of which are commonly used for high latency satellite links.
-          </p>
-          <h2 class="font-fjalla aligner_item--bottom">
-            Reliable Monitoring System
-          </h2>
-        </div>
-      </div>
-    </section>
+      </section>
+      <div class="section--stats-decoration"></div>
+    </div>
 
     <section class="section--snippets scroll-to-reveal js-section">
       <div class="flex--horizontal">
@@ -213,7 +206,7 @@
             </p>
           </div>
         </div>
-        <img class="features__image" src="./images/features-image.png" />
+        <img class="features__image" src="./images/features-image.jpg" alt="avg. response time"/>
         <div class="features__right aligner flex--vertical">
           <div class="flex--vertical fadeInRight fadeInRight--1">
             <object
@@ -322,12 +315,12 @@
         <h3 class="font-fjalla">Trusted by</h3>
       </div>
       <div class="flex--horizontal">
-        <img src="/images/logos/1.svg" class="logo" />
-        <img src="/images/logos/2.svg" class="logo" />
-        <img src="/images/logos/3.svg" class="logo" />
-        <img src="/images/logos/4.svg" class="logo" />
-        <img src="/images/logos/5.svg" class="logo" />
-        <img src="/images/logos/6.svg" class="logo" />
+        <img src="/images/logos/1.svg" class="logo" alt="Airbnb" />
+        <img src="/images/logos/2.svg" class="logo" alt="Twitter" />
+        <img src="/images/logos/3.svg" class="logo" alt="Eventbrite" />
+        <img src="/images/logos/4.svg" class="logo" alt="Netflix" />
+        <img src="/images/logos/5.svg" class="logo" alt="Google" />
+        <img src="/images/logos/6.svg" class="logo" alt="Spotify" />
       </div>
     </section>
 
@@ -349,7 +342,10 @@
                 </p>
               </div>
               <div class="slide__image slide-0">
-                <img src="./images/customer-1.png" />
+                <picture>
+                  <source media="(max-width: 770px)" srcset="./images/customer-1-mobile.jpg" />
+                  <img src="./images/customer-1.jpg" alt="customer" />
+                </picture>
               </div>
             </div>
           </div>
@@ -367,7 +363,10 @@
                 </p>
               </div>
               <div class="slide__image slide-1">
-                <img src="./images/customer-2.png" />
+                <picture>
+                  <source media="(max-width: 770px)" srcset="./images/customer-2-mobile.jpg" />
+                  <img src="./images/customer-2.jpg" alt="customer" />
+                </picture>
               </div>
             </div>
           </div>
@@ -385,6 +384,31 @@
         </div>
       </div>
     </section>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Open+Sans"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.9/css/all.css"
+      integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.6.0/tiny-slider.css"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.6.0/min/tiny-slider.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment-with-locales.min.js"
+      integrity="sha512-vFABRuf5oGUaztndx4KoAEUVQnOvAIFs59y4tO0DILGWhQiFnFHiR+ZJfxLDyJlXgeut9Z07Svuvm+1Jv89w5g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
     <script type="text/javascript" src="./js/main.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->

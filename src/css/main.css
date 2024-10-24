@@ -33,10 +33,6 @@ h5 {
   font-weight: 400;
 }
 
-.font-opensans {
-  font-family: "Open Sans", sans-serif;
-}
-
 html,
 body {
   margin: 0;
@@ -84,6 +80,11 @@ nav a {
 
 nav a:not(:last-child) {
   margin-right: 2rem;
+}
+
+.section--container {
+  width: 100%;
+  position: relative;
 }
 
 @media only screen and (max-width: 770px) {
@@ -265,15 +266,15 @@ section {
   position: relative;
 }
 
-.section--summary:after {
-  content: "";
-  left: -1440px;
-  background: url(./../images/lines.svg) repeat-x;
+.section--stats-decoration {
+  width: 100%;
   height: 406px;
-  width: calc(1440px * 3);
+  background: url(./../images/lines.svg) repeat-x;
+  background-size: contain;
   position: absolute;
   bottom: 0;
   right: 0;
+  left: 0;
   z-index: -10;
   animation: infiniteStats 120s linear infinite;
 }
@@ -282,11 +283,22 @@ section {
   flex: 1;
 }
 
-.section--summary .summary__list img {
+.summary__list--icon {
   align-self: flex-start;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
   width: 50px;
   height: 50px;
+  margin: 0;
   margin-right: 1rem;
+  background-color: #f5f2fe;
+  border-radius: 50%;
+}
+.summary__list--icon i {
+  font-size: 21px;
+  color: #5f4ad4;
 }
 
 .section--summary .summary__list:first-of-type {
@@ -646,20 +658,17 @@ section {
   text-decoration: none;
   position: relative;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.cta:after {
-  position: absolute;
-  content: "";
-  background-image: url(./../images/apple.png);
-  right: 0.5rem;
-  top: 20%;
-  display: block;
-  width: 30px;
-  height: 30px;
-  background-size: contain;
-  background-repeat: no-repeat;
+.cta--icon {
+  font-size: 32px;
+  margin: 0 2px 2px 0;
 }
+
 
 .fadeIn {
   animation: fadeIn 1s ease-in-out;
@@ -729,11 +738,10 @@ section {
 
 @keyframes infiniteStats {
   0% {
-    transform: translate3d(-1440px, 0, 0);
+    background-position: 0 0; /* Posición inicial */
   }
-
   100% {
-    transform: translate3d(0, 0, 0);
+    background-position: 100vw 0; /* Mueve 1000px a la izquierda */
   }
 }
 
@@ -752,7 +760,7 @@ section {
     border-radius: 0;
   }
 
-  .section--summary:after {
+  .section--stats-decoration {
     display: none;
   }
 
@@ -950,7 +958,7 @@ section {
     border: 0;
   }
 
-  .section--summary .summary__list img {
+  .summary__list--icon {
     align-self: center;
     margin-bottom: 0.5rem;
     margin-right: 0;
